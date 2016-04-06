@@ -3,56 +3,119 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>HappyFood</title><!-- CABEZERA-->
-
 <style type="text/css">
 #Cuerpo {
 	height: auto;
 	width: auto;
-	rgba(255,255,81,0.8)
-	font-family: Verdana, Geneva, sans-serif;
+	background-color: rgb(255,255,255);
 	background-image: url(file:./Imagenes/background.png);
 	background-repeat: repeat;
+	border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
 }
+
 #Cuerpo #Logo {
-	height: 273px;
-	width: 300px;
+	height: 150px;
+	width: 136px;
 	float: left;
-	background-image: url(file:./Imagenes/logo%20hamburguesa.png);
+
 }
 
 #Cuerpo #Menu {
 	background-color: rgba(255,204,0,0.7);
     border-radius: 7px;
-    width: 500px;
+    width: 100%;
     float: left;
 }
 #Cuerpo #Ubicacion {
 	background-color: rgba(255,255,81,0.7);
 	border-radius: 7px;
-	width: 300px;
 	float: left;
+	width: 100%;
 }
 #Cuerpo #Contactos {
 	background-color: rgba(255,255,255,0.8);
-	border-radius: 7px;
+	border-radius: 15px;
 	width: 96;
 	float: left;
 }
 #Cuerpo #ESLOGAN {
-	border-radius: 7px;
-	width: auto;
 	float: left;
-	background-color: rgba(255,255,153,0.7);
+	border-radius: 7px;
+	/*background-color: rgba(255,255,153,0.7);*/
 }
 #Cuerpo #Publicidad {
+	align-content: left;
 	background-color: #FFC;
 	border-radius: 7px;
-	width: 500px;
-	height: 200px;
-	clear: left;
+	height: 100%;
+	width: 100%;
 	color: #F00;
+	clear: both;
 }
-.coloLetra {
+
+#Cuerpo #Top {
+	height: 150px;
+	background-color: rgba(255,255,153,0.7);
+	border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+#Cuerpo #Mid{
+
+	border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+#Cuerpo #Bot{
+	clear: both;
+	border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+#Cuerpo #Izq{
+    float: left;
+	width: 20%;
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+#Cuerpo #Cent{
+   float: left;
+	width: 63%;
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+#Cuerpo #Der{
+	float: left;
+	width: 15%;
+
+    border-style:dotted;
+    border-width: 100
+	font-family: Verdana, Geneva, sans-serif;
+	/*background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;*/
+}
+
+.ColorLetra {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
 	font-style: oblique;
@@ -69,77 +132,91 @@
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 36px;
 	font-weight: bold;
-	color: #39C;
+	color: rgba(255,61,0,1);
 	text-decoration: blink;
 }
+
 </style>
 </head>
-
 <body> 
-<div id= Cuerpo>
 
-<div id=top> <div id= Logo></div><!--FIN LOGO DE LA PAGINA-->
-  <div align=center class="ColorEslogan" id=ESLOGAN>BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
-    <div id=Contactos><div><img src="./Imagenes/twitter icon.png" width="32" height="32" longdesc="https://twitter.com/?lang=es" /></div> 
-      <div>
-        <img src="./Imagenes/facebook icon.png" width="32" height="32" longdesc="https://es-la.facebook.com/"/> </div><div> <img src="./Imagenes/instagram icon.png" width="32" height="32" longdesc="https://www.instagram.com/" />
-      </div>
-  </div>
+<div id=Cuerpo>
+	<div id=Top>
+	  <div id= Logo><img src="./Imagenes/logo%20hamburguesa.png" width="136" height="150"/></div><!--FIN LOGO DE LA PAGINA-->
+	  <div align=center class="ColorEslogan" id=ESLOGAN>BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
+	    <div id=Contactos align="left">
+	    	<a href="https://twitter.com/?lang=es"><img src="./Imagenes/twitter icon.png" width="32" height="32"/>
+	    	</a>
+	        <a href="https://es-la.facebook.com/">
+	        <img src="./Imagenes/facebook icon.png" width="32" height="32"/> 
+	        </a>
+	        <a href="https://www.instagram.com/">
+	        <img src="./Imagenes/instagram icon.png" width="32" height="32"/>
+	      	</a>
+	  </div>
+	</div>
+	<div id=Mid>
+			<div id=Izq>
+				<div id=Ubicacion>
+				<font  class="ColorTitulos">LOCALIZACION</font><BR>
+		          <div>
+		            <blockquote>
+		              <span class="ColorLetra">Maracaibo<BR>
+		              </span></blockquote>
+		          </div><!--FIN ITEM MARACAIBO-->
+		          <div>
+		            <blockquote><span class="ColorLetra">
+		              Valencia<BR>
+		            </span></blockquote>
+		          </div><!--FIN ITEM VALENCIA-->
+		          <div>
+		            <blockquote><span class="ColorLetra">
+		              Caracas</span><BR>
+		            </blockquote>
+		          </div><!--FIN ITEM CARACAS-->
+		          <div><a href="https://www.yolopido.com"><img src="./Imagenes/transportar.png"/></a> </div><!--FIN ITEM A DOMICILIO-->
+		        </div><!--FIN UBICACION--> 
+			</div>
+			
+			<div id=Cent>
+				<div align=left class="ColorLetra" id=Menu>
+	            <font class="ColorTitulos">MENU</font>
+	            <div>
+	              <blockquote>
+	                Pizzas<BR>
+	              </blockquote>
+	            </div><!--FIN ITEM PIZZA-->
+	            <div>
+	              <blockquote>
+	                Hamburguezas<BR>
+	              </blockquote>
+	            </div><!--FIN ITEM HAMBURGUESA-->
+	            <div>
+	              <blockquote>
+	                Perro calientes<BR>
+	              </blockquote>
+	            </div><!--FIN PERRO CALIENTE-->
+	              <div>
+	                <blockquote class="ColorLetra">
+	                  Cachapas<BR>
+	                </blockquote>
+	              </div><!--FIN ITEM CACHAPAS-->
+	            </div><!--FIN MENU-->  
+				</div>
+
+				<div id=Der>
+				<img src="./Imagenes/pepsi vather.png" width="175" />
+			</div>
+	</div>
+			<div id=Bot>
+			Bot
+			</div>
+	
+	
 </div>
 
-<div id=Cent> 
-    <div id=izq><div id=Ubicacion>
-          <font  class="ColorTitulos">LOCALIZACION</font><BR>
-          <div>
-            <blockquote>
-              <span class="coloLetra">Maracaibo<BR>
-              </span></blockquote>
-          </div><!--FIN ITEM MARACAIBO-->
-          <div>
-            <blockquote><span class="coloLetra">
-              Valencia<BR>
-            </span></blockquote>
-          </div><!--FIN ITEM VALENCIA-->
-          <div>
-            <blockquote><span class="coloLetra">
-              Caracas</span><BR>
-            </blockquote>
-          </div><!--FIN ITEM CARACAS-->
-          <div><a href="https://www.yolopido.com"><img src="./Imagenes/transportar.png"/></a> </div><!--FIN ITEM A DOMICILIO-->
-        </div><!--FIN UBICACION--> 
-    </div><!--FIN AREA izquierda del centro-->
-    <div id=mid><div align=left class="coloLetra" id=Menu>
-            <font class="ColorTitulos">MENU</font>
-            <div>
-              <blockquote>
-                Pizzas<BR>
-              </blockquote>
-            </div><!--FIN ITEM PIZZA-->
-            <div>
-              <blockquote>
-                Hamburguezas<BR>
-              </blockquote>
-            </div><!--FIN ITEM HAMBURGUESA-->
-            <div>
-              <blockquote>
-                Perro calientes<BR>
-              </blockquote>
-            </div><!--FIN PERRO CALIENTE-->
-              <div>
-                <blockquote class="coloLetra">
-                  Cachapas<BR>
-                </blockquote>
-              </div><!--FIN ITEM CACHAPAS-->
-           </div><!--FIN MENU-->  
-      </div><!--FIN AREA MEDIA DEL CENTRO-->
-      <div id=rig>
-          <div id=Publicidad>Imagen Publicitaria</div><!--FIN PUBLICIDAD--> 
-      </div>
-</div><!--FIN AREA CENTRAL VERTICAL-->
 
-<div id=bot> </div>
 
-</div> <!--FIN CUERPO-->
 
 </body>
 </html>
