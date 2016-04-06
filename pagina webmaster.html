@@ -10,16 +10,17 @@
 	background-color: rgb(255,255,255);
 	background-image: url(file:./Imagenes/background.png);
 	background-repeat: repeat;
-	border-color: rgb(0,0,0);
+	/*border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100
 	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+	background-image: url(file:./Imagenes/background.png);
+	background-repeat: repeat;
+	*/
 }
 
 #Cuerpo #Logo {
-	height: 150px;
+	height: 99%;
 	width: 136px;
 	float: left;
 
@@ -28,23 +29,23 @@
 #Cuerpo #Menu {
 	background-color: rgba(255,204,0,0.7);
     border-radius: 7px;
-    width: 100%;
+    width: 99%;
     float: left;
 }
 #Cuerpo #Ubicacion {
 	background-color: rgba(255,255,81,0.7);
 	border-radius: 7px;
 	float: left;
-	width: 100%;
+	width: 99%;
 }
 #Cuerpo #Contactos {
 	background-color: rgba(255,255,255,0.8);
 	border-radius: 15px;
 	width: 96;
-	float: left;
+	float: right;
 }
 #Cuerpo #ESLOGAN {
-	float: left;
+	float: center;
 	border-radius: 7px;
 	/*background-color: rgba(255,255,153,0.7);*/
 }
@@ -60,58 +61,51 @@
 #Cuerpo #Top {
 	height: 150px;
 	background-color: rgba(255,255,153,0.7);
-	border-color: rgb(0,0,0);
+	/*border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+
+	*/
 }
 #Cuerpo #Mid{
-
-	border-color: rgb(0,0,0);
+	font-family: Verdana, Geneva, sans-serif;
+	/* border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+
+	*/
 }
 #Cuerpo #Bot{
 	clear: both;
-	border-color: rgb(0,0,0);
+	/*border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+
+	*/
 }
 #Cuerpo #Izq{
     float: left;
 	width: 20%;
-    border-style:dotted;
+    /*border-style:dotted;
     border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+
+	*/
 }
 #Cuerpo #Cent{
-   float: left;
-	width: 63%;
-    border-style:dotted;
+    float: left;
+	width: 65%;
+    /*border-style:dotted;
     border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+	*/
 }
 #Cuerpo #Der{
 	float: left;
 	width: 15%;
-
-    border-style:dotted;
-    border-width: 100
 	font-family: Verdana, Geneva, sans-serif;
-	/*background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;*/
+	/*border-style:dotted;
+    border-width: 100;
+
+	*/
 }
 
 .ColorLetra {
@@ -123,14 +117,20 @@
 }
 .ColorMenu {
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 20px;
+	font-size: 30px;
 	font-style: oblique;
 	font-weight: bold;
 	color: rgba(255,0,0,1);
 }
 
-.ColorTitu
 .ColorTitulos {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	color: #39C;
+}
+
+.ColorTitulos2 {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 24px;
 	font-weight: bold;
@@ -163,10 +163,11 @@
 	      	</a>
 	  </div>
 	</div>
+	</br>
 	<div id=Mid>
 			<div id=Izq>
 				<div id=Ubicacion>
-				<font  class="ColorTitulos">LOCALIZACION</font><BR>
+				<font  class="ColorTitulos2">LOCALIZACION</font><BR>
 		          <div>
 		            <blockquote>
 		              <span class="ColorLetra">Maracaibo<BR>
@@ -190,22 +191,27 @@
 				<div align=left class="ColorMenu" id=Menu>
 	            <font class="ColorTitulos">MENU</font>
 	            <div>
-	              <blockquote>
+	              <blockquote class="ColorMenu">
+	              <img src="./Imagenes/comida pizza.png"/>
 	                Pizzas<BR>
 	              </blockquote>
+	              <div id=itempizza1></div>
+	              <div id=itempizza2></div>
 	            </div><!--FIN ITEM PIZZA-->
 	            <div>
-	              <blockquote>
+	              <blockquote class="ColorMenu">
+	              <img src="./Imagenes/comida hamburguesa.png"/>
 	                Hamburguezas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
 	            <div>
-	              <blockquote>
+	              <blockquote class="ColorMenu">
+	              	<img src="./Imagenes/comida perro.png"/>
 	                Perro calientes<BR>
 	              </blockquote>
 	            </div><!--FIN PERRO CALIENTE-->
 	              <div>
-	                <blockquote class="ColorLetra">
+	                <blockquote class="ColorMenu">
 	                  Cachapas<BR>
 	                </blockquote>
 	              </div><!--FIN ITEM CACHAPAS-->
@@ -213,7 +219,7 @@
 				</div>
 
 				<div id=Der>
-				<img src="./Imagenes/pepsi vather.png" width="175" />
+				<img src="./Imagenes/pepsi vather.png" width=100% />
 			</div>
 	</div>
 			<div id=Bot>
@@ -223,8 +229,29 @@
 	
 </div>
 
-
-
-
 </body>
+
+
+
+<script type="text/javascript">
+    function ExpandMenuPizza() {
+    	
+	document.getElementById("Cuerpo").background-image="";
+    	listcheck = true
+
+        itempizza1.height = 50;
+        itempizza1.background-color = rgb(0,0,0);
+        itempizza2.height = 50;
+        itempizza3.background-color = rgb(0,0,0);
+        if(listcheck)
+        	listcheck = true
+        itempizza1.height = 0;
+        
+        itempizza2.height = 0;
+        
+
+    }
+</script>
+
+
 </html>
