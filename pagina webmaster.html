@@ -4,6 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>HappyFood</title><!-- CABEZERA-->
 <style type="text/css">
+
+
+
+
 #Cuerpo {
 	height: 100%;
 	width: auto;
@@ -21,8 +25,11 @@
 
 #Cuerpo #Logo {
 	height: 99%;
-	width: 157px;
+	width: 20%;
 	float: left;
+	/*border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100*/
 
 }
 
@@ -43,11 +50,16 @@
 	border-radius: 15px;
 	width: 96;
 	float: right;
+	/*border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100*/
 }
 #Cuerpo #ESLOGAN {
 	float: left;
 	border-radius: 7px;
-	/*background-color: rgba(255,255,153,0.7);*/
+	/*border-color: rgb(0,0,0);
+    border-style:dotted;
+    border-width: 100*/
 }
 #Cuerpo #Publicidad {
 	background-color: #FFC;
@@ -143,6 +155,13 @@
 	color: rgba(255,61,0,1);
 	text-decoration: blink;
 }
+body {
+	background-color: rgb(255,255,255);
+ 	background-image: url(file:./Imagenes/background.png);
+    background-repeat: repeat;
+    margin: 0px;
+    height: 100%;
+}
 
 </style>
 </head>
@@ -151,7 +170,7 @@
 <div id=Cuerpo>
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
-	  <div class="ColorEslogan" id=ESLOGAN>BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
+	  <div class="ColorEslogan" id=ESLOGAN style="margin-top: 3%">BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
 	    <div id=Contactos align="left">
 	    	<a href="https://twitter.com/?lang=es"><img src="./Imagenes/twitter icon.png" width="32" height="32"/>
 	    	</a>
@@ -207,12 +226,19 @@
 	            <div>
 	              <blockquote class="ColorMenu">
 	              	<img src="./Imagenes/comida perro.png"/>
-	                Perro calientes<BR>
+	                Perros calientes<BR>
 	              </blockquote>
 	            </div><!--FIN PERRO CALIENTE-->
 	              <div>
 	                <blockquote class="ColorMenu">
-	                  Cachapas<BR>
+	                <img src="./Imagenes/taco.png"/>
+	                  Taco<BR>
+	                </blockquote>
+	              </div><!--FIN ITEM CACHAPAS-->
+	              <div>
+	                <blockquote class="ColorMenu">
+	                <img src="./Imagenes/nachos.png"/>
+	                  Otros<BR>
 	                </blockquote>
 	              </div><!--FIN ITEM CACHAPAS-->
 	            </div><!--FIN MENU-->  
@@ -222,12 +248,11 @@
 				<img src="./Imagenes/pepsi vather.png" width=100% />
 			</div>
 	</div>
-			<div id=Bot>
+			
+</div>
+<div id=Bot>
 			Bot
 			</div>
-	
-	
-</div>
 
 </body>
 
