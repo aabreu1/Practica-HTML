@@ -8,7 +8,7 @@
 #Cuerpo {
 	height: 100%;
 	width: 70%;
-	float: middle;
+	margin-left: 15%;
 	background-color: rgb(255,255,255);
 	background-image: url(file:./Imagenes/background.png);
 	background-repeat: repeat;
@@ -163,30 +163,6 @@ body {
 </style>
 </head>
 <body> 
-
-	<script language="JavaScript">
-		var numeros = "0123456789"
-		var check = false;
-	do{
-		var cliente = prompt("Permitanos saber su nombre")
-		for (var i = 0; i < cliente.length; i++) {
-			var letra = cliente.substring(i,i+1);
-			
-			var j = 0;
-			while(j<10){
-				var numero = numeros.substring(i,i+1);
-			if (letra == numero)
-				check = true;
-				alert("Disculpe no se puede ingresar numeros para  los nombres")
-			}
-			
-		}
-
-	}while(check)
-
-	</script>
-
-
 <div id=Cuerpo>
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
@@ -270,9 +246,9 @@ body {
 	</div>
 			
 </div>
+
 <div id=Bot>
-		
-			</div>
+</div>
 
 
 </body>
