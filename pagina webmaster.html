@@ -1,19 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>HappyFood</title><!-- CABEZERA-->
 <style type="text/css">
 
-
-
-
 #Cuerpo {
 	height: 100%;
-	width: auto;
-	background-color: rgb(255,255,255);
-	background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;
+	width: 70%;
+	margin-left: 15%;
+	background-color: rgba(255,255,255,0);
+	
 	/*border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100
@@ -50,6 +47,7 @@
 	border-radius: 15px;
 	width: 96;
 	float: right;
+	clear: both;
 	/*border-color: rgb(0,0,0);
     border-style:dotted;
     border-width: 100*/
@@ -72,6 +70,7 @@
 
 #Cuerpo #Top {
 	height: 150px;
+	border-radius: 7px;
 	background-color: rgba(255,255,153,0.7);
 	/*border-color: rgb(0,0,0);
     border-style:dotted;
@@ -119,7 +118,6 @@
 
 	*/
 }
-
 .ColorLetra {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
@@ -166,7 +164,6 @@ body {
 </style>
 </head>
 <body> 
-
 <div id=Cuerpo>
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
@@ -220,7 +217,7 @@ body {
 	            <div>
 	              <blockquote class="ColorMenu">
 	              <img src="./Imagenes/comida hamburguesa.png"/>
-	                Hamburguezas<BR>
+	                Hamburguesas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
 	            <div>
@@ -248,35 +245,58 @@ body {
 				<img src="./Imagenes/pepsi vather.png" width=100% />
 			</div>
 	</div>
-			
+	<div id=Bot>
+	<script language="JavaScript"> document.write(cliente) </script>
+	</div>	
 </div>
-<div id=Bot>
-			Bot
-			</div>
+
+
+<script language="JavaScript">
+	
+	cliente ="";	
+	do{
+		check=false;
+		cliente = prompt("Por favor permitanos saber su nombre");
+		if(cliente == ""){
+				alert("no ingreso ningun nombre");
+			}
+		else{	for (var i = 0; i <= cliente.length; i++) {
+				letra = cliente.substring(i,i+1);
+				document.write(letra);
+				switch(letra){
+					case '1': check = true; break;
+					case '2': check = true; break;
+					case '3': check = true; break;
+					case '4': check = true; break;
+					case '5': check = true; break;
+					case '6': check = true; break;
+					case '7': check = true; break;
+					case '8': check = true; break;
+					case '9': check = true; break;
+					case '0': check = true; break;
+					}
+				}
+			}		
+		if(check == true) {
+			alert("Disculpe no se puede ingresar numeros para  los nombres");
+		}
+	}while(check==true);
+	
+	var check = false;	
+
+	while(check==false){
+		check = true;
+		var edad = prompt("Por favor ingrese su edad");
+	   
+		if (edad < 10 || edad > 110){
+					alert ("la edad debe estar comprendida entre 10 y 110 annos");
+					check = false;
+				}
+
+		}//while
+
+	</script>
 
 </body>
-
-
-
-<script type="text/javascript">
-    function ExpandMenuPizza() {
-    	
-	document.getElementById("Cuerpo").background-image="";
-    	listcheck = true
-
-        itempizza1.height = 50;
-        itempizza1.background-color = rgb(0,0,0);
-        itempizza2.height = 50;
-        itempizza3.background-color = rgb(0,0,0);
-        if(listcheck)
-        	listcheck = true
-        itempizza1.height = 0;
-        
-        itempizza2.height = 0;
-        
-
-    }
-</script>
-
 
 </html>
