@@ -10,7 +10,6 @@
 						}
 					else{	for (var i = 0; i <= cliente.length; i++) {
 							letra = cliente.substring(i,i+1);
-							document.write(letra);
 							switch(letra){
 								case '1': check = true; break;
 								case '2': check = true; break;
@@ -32,14 +31,14 @@
 				return cliente;
 		}
 		
-		function FormatNombre(String nom){
+		function FormatNombre(nom){
 			var fnombre;
 			var fapellido;
 			var nombre_apellido = nom.split(" ");
 			
-			fnombre = fnombre+.nombre_apellido.charAt(0).toUpperCase();
+			fnombre = fnombre+nombre_apellido[0].charAt(0).toUpperCase();
 			for (var i = 1; i < nombre_apellido[0].length; i++) {
-				fnombre = fnombre+.nombre_apellido.charAt(i).toLowerCase();
+				fnombre = fnombre+nombre_apellido[0].charAt(i).toLowerCase();
 			}
 			return fnombre;
 		}
@@ -52,7 +51,7 @@
 
 			while(check==false){
 			check = true;
-			diaC = prompt("Por favor ingrese dia de nacimiento");
+			diaC = prompt("Por favor ingrese DIA de nacimiento");
 
 			if (diaC <= 0 ||  diaC.length > 2){      
 						alert ("error al ingresar dia");
@@ -60,10 +59,10 @@
 					}
 			}//while
 		
-
+			check = false;
 			while(check==false){
 			check = true;
-			mesC = prompt("Por favor ingrese dia de nacimiento");
+			mesC = prompt("Por favor ingrese MES de nacimiento");
 
 			if (mesC <= 0 ||  mesC.length > 12){      
 						alert ("error al ingresar mes");
@@ -74,33 +73,27 @@
 			return diaC+"-"+mesC;
 		}
 		
-		function CumplePromo(string cumplannos,string nombre){
+		function CumplePromo(cumplannos,nombre){
 			 	
 			 var fecha = new Date();
-		   	 dia = fecha.getDate();
-		   	 mes = fecha.getMonth();
-			 var aux = cumplannos.spli("-");
+		   	 var dia = fecha.getDate();
+		   	 var mes = fecha.getMonth();
+			 var aux = cumplannos.split("-");
 			 
-			 if(dia == aux[1] && mes = aux[2])
+			 if(dia == aux[0] && mes == aux[1])
 			 	{alert("FELIZ CUMPLEAÑOS "+cliente+"!!! para celebrarlo te ofrecemos un 12% de descuento!!! Feliz dia, Feliz comida!");}
 
 		}
 		
-		function imprimir (string text){
+		function imprimir (text){
 			document.write(text);
 		}
 
-		function aviso(string text){
+		function aviso(text){
 			alert(text);
 		}
 
-		function flip(){
-			alert("Se lanzara una moneda");
-			coin = getNum(1,2);
-			if (coin == 1) alert("CARA");
-			else (coin == 2) alert("SELLO");
-			
-		}
+	
 
 		function getSugerencia(){
 			sugerencia  = getNum(1,5);
@@ -117,10 +110,6 @@
 				break;
 			}
 		} 
-
-		function getNum(min, max) {
-		  return Math.floor((Math.random() * max) + min);
-		}
 
 		function goLink(link){
 			switch(link){
@@ -142,7 +131,17 @@
 		    fnom = FormatNombre(nom);
 		    fecha = getCumple();
 		    CumplePromo(fecha, fnom);
-			imprimir(fnombre+"te Recomendamos hoy las Hamburguesas");
+			aviso(fnom+", Hoy te Recomendamos hoy las Hamburguesas");
 		}
 
-	
+		function flip(){
+				
+				var coin = getNum(1,2);
+				if (coin == 1) alert("CARA");
+				else alert("SELLO");
+				
+			}
+
+		function getNum(min, max) {
+		  return Math.floor((Math.random() * max) + min);
+		}

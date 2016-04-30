@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
-
+<script src="./js/script.js"></script>
 <link rel="stylesheet" href="css/estilos.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,9 +63,9 @@
 	              <div id=itempizza1></div>
 	              <div id=itempizza2></div>
 	            </div><!--FIN ITEM PIZZA-->
-	            <div onclick="goLink(2)">
-	              <blockquote class="ColorMenu">
-	              <img src="./Imagenes/comida hamburguesa.png"/>
+	            <div >
+	              <blockquote class="ColorMenu" onclick="goLink(2)">
+	              <img src="./Imagenes/comida hamburguesa.png" onclick="goLink(2)"/>
 	                Hamburguesas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
@@ -98,27 +98,19 @@
 	<blockquote class="ColorMenu">
 	                  No puedes decidir?
 	                </blockquote>
-	<button onclick="flip()">Lanza una Moneda</button>
-	
+		<BR>
+	<img src="./imagenes/coins.png" onclick="flip()">
+			<blockquote class="ColorMenu">
+	                  Lanza una moneda
+	                </blockquote>
+	<BR>
+	<img src="./imagenes/direction.png" onclick="getSugerencia()">
+			<blockquote class="ColorMenu">
+	                  Arriesgate (Sugerencia Aleatoria)
+	                </blockquote>
 	</div>	
 </div>
-<!---	<script type="text/javascript">
-		
-		function flip(){
-			alert("Se lanzara una moneda");
-			coin = getNum(1,2);
-			if (coin == 1) alert("CARA");
-			if (coin == 2) alert("SELLO");
-			
-		}
 
-		function getNum(min, max) {
-		  return Math.floor((Math.random() * max) + min);
-		}
-
-	</script> -->
-
-<script src="./script.js"></script>
 </body>
 
 </html>
