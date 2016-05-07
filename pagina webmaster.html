@@ -1,238 +1,86 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<script src="./js/script.js"></script>
+<link rel="stylesheet" href="css/estilos.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>HappyFood</title><!-- CABEZERA-->
-<style type="text/css">
 
-#Cuerpo {
-	height: 100%;
-	width: 70%;
-	margin-left: 15%;
-	background-color: rgba(255,255,255,0);
-	
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100
-	font-family: Verdana, Geneva, sans-serif;
-	background-image: url(file:./Imagenes/background.png);
-	background-repeat: repeat;
-	*/
-}
 
-#Cuerpo #Logo {
-	height: 99%;
-	width: 20%;
-	float: left;
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100*/
-
-}
-
-#Cuerpo #Menu {
-	background-color: rgba(255,204,0,0.7);
-    border-radius: 7px;
-    width: 99%;
-    float: left;
-}
-#Cuerpo #Ubicacion {
-	background-color: rgba(255,255,81,0.7);
-	border-radius: 7px;
-	float: left;
-	width: 99%;
-}
-#Cuerpo #Contactos {
-	background-color: rgba(255,255,255,0.8);
-	border-radius: 15px;
-	width: 96;
-	float: right;
-	clear: both;
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100*/
-}
-#Cuerpo #ESLOGAN {
-	float: left;
-	border-radius: 7px;
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100*/
-}
-#Cuerpo #Publicidad {
-	background-color: #FFC;
-	border-radius: 7px;
-	height: 100%;
-	width: 100%;
-	color: #F00;
-	clear: both;
-}
-
-#Cuerpo #Top {
-	height: 150px;
-	border-radius: 7px;
-	background-color: rgba(255,255,153,0.7);
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100
-
-	*/
-}
-#Cuerpo #Mid{
-	font-family: Verdana, Geneva, sans-serif;
-	/* border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100
-
-	*/
-}
-#Cuerpo #Bot{
-	clear: both;
-	/*border-color: rgb(0,0,0);
-    border-style:dotted;
-    border-width: 100
-
-	*/
-}
-#Cuerpo #Izq{
-    float: left;
-	width: 20%;
-    /*border-style:dotted;
-    border-width: 100
-
-	*/
-}
-#Cuerpo #Cent{
-    float: left;
-	width: 65%;
-    /*border-style:dotted;
-    border-width: 100
-	*/
-}
-#Cuerpo #Der{
-	float: left;
-	width: 15%;
-	font-family: Verdana, Geneva, sans-serif;
-	/*border-style:dotted;
-    border-width: 100;
-
-	*/
-}
-.ColorLetra {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 18px;
-	font-style: oblique;
-	font-weight: bold;
-	color: rgba(255,0,0,1);
-}
-.ColorMenu {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 30px;
-	font-style: oblique;
-	font-weight: bold;
-	color: rgba(255,0,0,1);
-}
-
-.ColorTitulos {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 36px;
-	font-weight: bold;
-	color: #39C;
-}
-
-.ColorTitulos2 {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	color: #39C;
-}
-.ColorEslogan {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 36px;
-	font-weight: bold;
-	color: rgba(255,61,0,1);
-	text-decoration: blink;
-}
-body {
-	background-color: rgb(255,255,255);
- 	background-image: url(file:./Imagenes/background.png);
-    background-repeat: repeat;
-    margin: 0px;
-    height: 100%;
-}
-
-</style>
 </head>
-<body> 
+<body onload="load()"> 
 <div id=Cuerpo>
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
 	  <div class="ColorEslogan" id=ESLOGAN style="margin-top: 3%">BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
-	    <div id=Contactos align="left">
-	    	<a href="https://twitter.com/?lang=es"><img src="./Imagenes/twitter icon.png" width="32" height="32"/>
-	    	</a>
-	        <a href="https://es-la.facebook.com/">
+	    <div id=Contactos align="left" onclick="goLink(7)">
+	    	<img src="./Imagenes/twitter icon.png" width="32" height="32"/>
+	    	
 	        <img src="./Imagenes/facebook icon.png" width="32" height="32"/> 
-	        </a>
-	        <a href="https://www.instagram.com/">
+	        
+	    
 	        <img src="./Imagenes/instagram icon.png" width="32" height="32"/>
-	      	</a>
+	     
 	  </div>
 	</div>
 	</br>
 	<div id=Mid>
 			<div id=Izq>
-				<div id=Ubicacion>
-				<font  class="ColorTitulos2">LOCALIZACION</font><BR>
-		          <div>
+				<div id=Ubicacion onclick="goLink(6)">
+						<font  class="ColorTitulos2"> LOCALIZACION</font>
+				<BR>
+		          <div id = maracaibo onmouseover="Resaltar('maracaibo')" onmouseout="NoResaltar('maracaibo')">
 		            <blockquote>
 		              <span class="ColorLetra">Maracaibo<BR>
 		              </span></blockquote>
 		          </div><!--FIN ITEM MARACAIBO-->
-		          <div>
+		          <div id = valencia onmouseover="Resaltar('valencia')" onmouseout="NoResaltar('valencia')">
 		            <blockquote><span class="ColorLetra">
 		              Valencia<BR>
 		            </span></blockquote>
 		          </div><!--FIN ITEM VALENCIA-->
-		          <div>
+		          <div id = caracas onmouseover="Resaltar('caracas')" onmouseout="NoResaltar('caracas')"> 
 		            <blockquote><span class="ColorLetra">
 		              Caracas</span><BR>
 		            </blockquote>
-		          </div><!--FIN ITEM CARACAS-->
-		          <div><a href="https://www.yolopido.com"><img src="./Imagenes/transportar.png"/></a> </div><!--FIN ITEM A DOMICILIO-->
+		          </div ><!--FIN ITEM CARACAS-->
+		          <div><blockquote><span class="ColorLetra">
+		              A Domicilio</span>
+		            <a href="https://www.yolopido.com"><img src="./Imagenes/transportar.png"/></a></blockquote> </div><!--FIN ITEM A DOMICILIO-->
 		        </div><!--FIN UBICACION--> 
 			</div>
 			
 			<div id=Cent>
 				<div align=left class="ColorMenu" id=Menu>
 	            <font class="ColorTitulos">MENU</font>
-	            <div>
+	            
+	            <div id = pizza onmouseover="Resaltar('pizza')" onmouseout="NoResaltar('pizza')" onclick="goLink(1)">
 	              <blockquote class="ColorMenu">
-	              <img src="./Imagenes/comida pizza.png"/>
+	              <img src="./Imagenes/comida pizza.png" />
 	                Pizzas<BR>
 	              </blockquote>
 	              <div id=itempizza1></div>
 	              <div id=itempizza2></div>
 	            </div><!--FIN ITEM PIZZA-->
-	            <div>
-	              <blockquote class="ColorMenu">
+	            <div id = hamburguesa onmouseover="Resaltar('hamburguesa')" onmouseout="NoResaltar('hamburguesa')" onclick="goLink(2)">
+	              <blockquote class="ColorMenu" >
 	              <img src="./Imagenes/comida hamburguesa.png"/>
 	                Hamburguesas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
-	            <div>
+	            <div id = perro onmouseover="Resaltar('perro')" onmouseout="NoResaltar('perro')" onclick="goLink(3)">
 	              <blockquote class="ColorMenu">
 	              	<img src="./Imagenes/comida perro.png"/>
 	                Perros calientes<BR>
 	              </blockquote>
 	            </div><!--FIN PERRO CALIENTE-->
-	              <div>
+	              <div id = taco onmouseover="Resaltar('taco')" onmouseout="NoResaltar('taco')"onclick="goLink(4)">
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/taco.png"/>
 	                  Taco<BR>
 	                </blockquote>
 	              </div><!--FIN ITEM CACHAPAS-->
-	              <div>
+	              <div id = nachos onmouseover="Resaltar('nachos')" onmouseout="NoResaltar('nachos')" onclick="goLink(5)">
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/nachos.png"/>
 	                  Otros<BR>
@@ -245,57 +93,22 @@ body {
 				<img src="./Imagenes/pepsi vather.png" width=100% />
 			</div>
 	</div>
-	<div id=Bot>
-	<script language="JavaScript"> document.write(cliente) </script>
+	<div id=Bot align="center">
+	<blockquote class="ColorMenu">
+	                  No puedes decidir?
+	                </blockquote>
+		<BR>
+	<img src="./imagenes/coins.png" onclick="flip()">
+			<blockquote class="ColorMenu">
+	                  Lanza una moneda
+	                </blockquote>
+	<BR>
+	<img src="./imagenes/direction.png" onclick="getSugerencia()">
+			<blockquote class="ColorMenu">
+	                  Arriesgate (Sugerencia Aleatoria)
+	                </blockquote>
 	</div>	
 </div>
-
-
-<script language="JavaScript">
-	
-	cliente ="";	
-	do{
-		check=false;
-		cliente = prompt("Por favor permitanos saber su nombre");
-		if(cliente == ""){
-				alert("no ingreso ningun nombre");
-			}
-		else{	for (var i = 0; i <= cliente.length; i++) {
-				letra = cliente.substring(i,i+1);
-				document.write(letra);
-				switch(letra){
-					case '1': check = true; break;
-					case '2': check = true; break;
-					case '3': check = true; break;
-					case '4': check = true; break;
-					case '5': check = true; break;
-					case '6': check = true; break;
-					case '7': check = true; break;
-					case '8': check = true; break;
-					case '9': check = true; break;
-					case '0': check = true; break;
-					}
-				}
-			}		
-		if(check == true) {
-			alert("Disculpe no se puede ingresar numeros para  los nombres");
-		}
-	}while(check==true);
-	
-	var check = false;	
-
-	while(check==false){
-		check = true;
-		var edad = prompt("Por favor ingrese su edad");
-	   
-		if (edad < 10 || edad > 110){
-					alert ("la edad debe estar comprendida entre 10 y 110 annos");
-					check = false;
-				}
-
-		}//while
-
-	</script>
 
 </body>
 
