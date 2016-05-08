@@ -164,39 +164,46 @@ body {
 
 </style>
 </head>
-<body> 
+<body onload="LoadPago()"> 
 <div id=Cuerpo>
 	<div id=Mid>
 		<div id=Cent>
 			<div align=left class="ColorMenu" id=Menu > 
 			<img src="./Imagenes/comida hamburguesa.png" style="margin-left: 5%"/>
             <font class="ColorTitulos">Hamburguesas</font>
-            <div id = clasica onmouseover="Resaltar('clasica')" onmouseout="NoResaltar('clasica')" onclick="pago('clasica')">
+            <div>
               <blockquote class="ColorMenu">
-                Sencilla<BR>
+                <br>
+							Nombre : <input type='text' name='txtnombre'> 
+							<span id='errorNom' class='error'>*</span>
+							<br><br>
               </blockquote>
             
             </div><!--FIN ITEM PIZZA-->
-            <div id = whopperC onmouseover="Resaltar('whopperC')" onmouseout="NoResaltar('whopperC')" onclick="pago('whopperC')">
+            <div>
               <blockquote class="ColorMenu">
-                Whopper de Carne<BR>
+               <br>
+							Producto : <input type='text' name='txtproducto'> 
+							<span id='errorproducto' class='error'></span>
+							<br><br>
               </blockquote>
             </div><!--FIN Carne-->
-            <div id = whopperP onmouseover="Resaltar('whopperP')" onmouseout="NoResaltar('whopperP')" onclick="pago('whopperP')">
+            <div>
               <blockquote class="ColorMenu">
-                Whopper de Pollo<BR>
+                <br>
+							Precio : <input type='text' name='txtprecio'> 
+							<span id='errorprecio' class='error'></span>
+							<br><br>
               </blockquote>
             </div><!--FIN Pollo-->
-              <div id = whopperM onmouseover="Resaltar('whopperM')" onmouseout="NoResaltar('whopperM')" onclick="pago('whopperM')">
+              <div>
                 <blockquote class="ColorMenu">
-                  Whopper Mixta<BR>
-                </blockquote>
+                  <br>
+							Ingredientes : <input type='text' name='txtingredientes'> 
+							<span id='erroringrediente' class='error'></span>
+							<br><br>
               </div><!--FIN  Mixta-->
-              <div id = sombrero onmouseover="Resaltar('sombrero')" onmouseout="NoResaltar('sombrero')" onclick="pago('sombrero')">
-                <blockquote class="ColorMenu">
-                  Sombrero Colosal<BR>
-                </blockquote>
-              </div><!--FIN Sombrero-->
+
             </div><!--FIN MENU-->
 
 		</div>

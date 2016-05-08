@@ -1,6 +1,23 @@
 
-		cliente ="";	
 		
+	var Comida = {
+		id : 0,
+		nombre : '',
+		precio : 0,
+		size : 0,
+		ingredientes : '',
+		adicionales : '',
+		
+	}
+	var cliente = {
+		nombre : '',
+		apellido : '',
+		dia : 0,
+		mes : 0,
+	}
+
+	var ObjCliente = Object.create(cliente);
+
 		function getNombre(){
 			do{
 					check=false;
@@ -51,9 +68,9 @@
 
 			while(check==false){
 			check = true;
-			diaC = prompt("Por favor ingrese DIA de nacimiento");
+			ObjCliente.dia = prompt("Por favor ingrese DIA de nacimiento");
 
-			if (diaC <= 0 ||  diaC.length > 2){      
+			if (ObjCliente.dia <= 0 ||  ObjCliente.dia.length > 2){      
 						alert ("error al ingresar dia");
 						check = false;
 					}
@@ -62,9 +79,9 @@
 			check = false;
 			while(check==false){
 			check = true;
-			mesC = prompt("Por favor ingrese MES de nacimiento");
+			ObjCliente.mes = prompt("Por favor ingrese MES de nacimiento");
 
-			if (mesC <= 0 ||  mesC.length > 12){      
+			if (ObjCliente.mes <= 0 ||  ObjCliente.mes > 12){      
 						alert ("error al ingresar mes");
 						check = false;
 					}
@@ -73,15 +90,14 @@
 			return diaC+"-"+mesC;
 		}
 		
-		function CumplePromo(cumplannos,nombre){
+		function CumplePromo(){
 			 	
 			 var fecha = new Date();
 		   	 var dia = fecha.getDate();
 		   	 var mes = fecha.getMonth();
-			 var aux = cumplannos.split("-");
 			 
-			 if(dia == aux[0] && mes == aux[1])
-			 	{alert("FELIZ CUMPLEAÑOS "+cliente+"!!! para celebrarlo te ofrecemos un 12% de descuento!!! Feliz dia, Feliz comida!");}
+			 if(dia == ObjCliente.dia && mes == ObjCliente.mes)
+			 	{alert("FELIZ CUMPLEAÑOS "+ObjCliente.nombre+"!!! para celebrarlo te ofrecemos un 12% de descuento!!! Feliz dia, Feliz comida!");}
 
 		}
 		
@@ -113,25 +129,32 @@
 
 		function goLink(link){
 			switch(link){
-				case 1:  window.locationf="./MenuPizza";
+				case 1: 
+						window.location="./MenuPizza.html";
 				break;
-				case 2:  window.locationf="./MenuHamburguesas";
+				case 2:  window.location="./MenuHamburguesas.html";
 				break;
-				case 3:  window.locationf="./MenuPerros";
+				case 3:  window.location="./MenuPerros.html";
 				break;
-				case 4:  window.locationf="./MenuTacos";
+				case 4:  window.location="./MenuTacos.html";
 				break;
-				case 5:  window.locationf="./MenuOtros";
+				case 5:  window.location="./MenuOtros.html";
+				break;
+				case 6:  window.location="./Ubicacion.html";
+				break;
+				case 7:  window.location="./Contacto.html";
+				break;
+				case 8: window.location="./Pago.html";
 				break;
 			}
 		}
 
 		function load(){
 			nom = getNombre();
-		    fnom = FormatNombre(nom);
+		    ObjCliente.nombre = FormatNombre(nom);
 		    fecha = getCumple();
-		    CumplePromo(fecha, fnom);
-			aviso(fnom+", Hoy te Recomendamos hoy las Hamburguesas");
+		    CumplePromo();
+			aviso(ObjCliente.nombre+", Hoy te Recomendamos hoy las Hamburguesas");
 		}
 
 		function flip(){
@@ -144,4 +167,68 @@
 
 		function getNum(min, max) {
 		  return Math.floor((Math.random() * max) + min);
+
+		}
+
+		function Resaltar(id){
+			//alert("cambio de color");
+			document.getElementById(id).style.backgroundColor = "blue";
+		
+		}
+		function NoResaltar(id){
+		    //alert("cambio de color");
+			document.getElementById(id).style.backgroundColor = "rgba(255,204,0,0.0)";
+			
+		}
+
+		function pago(comida){
+
+			switch(comida){
+				     case 'clasica':
+						Comida.nombre = "Hamburguesa clasica";
+						Comida.precio = 800;
+						Comida.ingredientes = 'Carne';
+				     break;
+				     case 'whopperC':
+				     	Comida.nombre = "Hamburguesa whopper carne";
+						Comida.precio = 1200;
+						Comida.ingredientes = 'Carne, Queso';
+				     break;
+					 case 'whopperP':
+					 	Comida.nombre = "Hamburguesa whopper Pollo";
+						Comida.precio = 1300;
+						Comida.ingredientes = 'Pollo, Queso';
+					 break;
+				     case 'whopperM':
+				     	Comida.nombre = "Hamburguesa whopper mixta";
+						Comida.precio = 1300;
+						Comida.ingredientes = "Carne, Pollo, Queso";
+				     break;
+					 case 'sombrero':
+					 	Comida.nombre = 'Hamburguesa sombrero';
+						Comida.precio = 1300;
+						Comida.ingredientes = 'Carne, Pollo, lomito, papas fritas, Queso';
+					 break;
+			}
+			goLink(8);
+		}
+		function getPrecio()
+		{
+			return Comida.precio
+		}
+		function getProducto()
+		{
+			return Comida.nombre
+		}
+		function getIngre()
+		{
+			return Comida.ingredientes
+		}
+
+		function LoadPago(){
+
+			document.getElementByName("txtproducto").value = Comida.nombre;
+			document.getElementByName("txtprecio").value = Comida.precio;
+			document.getElementByName("txtingredientes").Value = Comida.ingredientes;
+
 		}

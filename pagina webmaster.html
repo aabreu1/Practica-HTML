@@ -13,39 +13,37 @@
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
 	  <div class="ColorEslogan" id=ESLOGAN style="margin-top: 3%">BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
-	    <div id=Contactos align="left">
-	    	<a href="https://twitter.com/?lang=es"><img src="./Imagenes/twitter icon.png" width="32" height="32"/>
-	    	</a>
-	        <a href="https://es-la.facebook.com/">
+	    <div id=Contactos align="left" onclick="goLink(7)">
+	    	<img src="./Imagenes/twitter icon.png" width="32" height="32"/>
+	    	
 	        <img src="./Imagenes/facebook icon.png" width="32" height="32"/> 
-	        </a>
-	        <a href="https://www.instagram.com/">
+	        
+	    
 	        <img src="./Imagenes/instagram icon.png" width="32" height="32"/>
-	      	</a>
+	     
 	  </div>
 	</div>
 	</br>
 	<div id=Mid>
 			<div id=Izq>
-				<div id=Ubicacion>
-				<a href="./Ubicacion.html"><font  class="ColorTitulos2"> LOCALIZACION</font>
-				</a>
+				<div id=Ubicacion onclick="goLink(6)">
+						<font  class="ColorTitulos2"> LOCALIZACION</font>
 				<BR>
-		          <div>
+		          <div id = maracaibo onmouseover="Resaltar('maracaibo')" onmouseout="NoResaltar('maracaibo')">
 		            <blockquote>
 		              <span class="ColorLetra">Maracaibo<BR>
 		              </span></blockquote>
 		          </div><!--FIN ITEM MARACAIBO-->
-		          <div>
+		          <div id = valencia onmouseover="Resaltar('valencia')" onmouseout="NoResaltar('valencia')">
 		            <blockquote><span class="ColorLetra">
 		              Valencia<BR>
 		            </span></blockquote>
 		          </div><!--FIN ITEM VALENCIA-->
-		          <div>
+		          <div id = caracas onmouseover="Resaltar('caracas')" onmouseout="NoResaltar('caracas')"> 
 		            <blockquote><span class="ColorLetra">
 		              Caracas</span><BR>
 		            </blockquote>
-		          </div><!--FIN ITEM CARACAS-->
+		          </div ><!--FIN ITEM CARACAS-->
 		          <div><blockquote><span class="ColorLetra">
 		              A Domicilio</span>
 		            <a href="https://www.yolopido.com"><img src="./Imagenes/transportar.png"/></a></blockquote> </div><!--FIN ITEM A DOMICILIO-->
@@ -55,33 +53,34 @@
 			<div id=Cent>
 				<div align=left class="ColorMenu" id=Menu>
 	            <font class="ColorTitulos">MENU</font>
-	            <div onclick="goLink(1)">
+	            
+	            <div id = pizza onmouseover="Resaltar('pizza')" onmouseout="NoResaltar('pizza')" onclick="goLink(1)">
 	              <blockquote class="ColorMenu">
-	              <img src="./Imagenes/comida pizza.png"/>
+	              <img src="./Imagenes/comida pizza.png" />
 	                Pizzas<BR>
 	              </blockquote>
 	              <div id=itempizza1></div>
 	              <div id=itempizza2></div>
 	            </div><!--FIN ITEM PIZZA-->
-	            <div >
-	              <blockquote class="ColorMenu" onclick="goLink(2)">
-	              <img src="./Imagenes/comida hamburguesa.png" onclick="goLink(2)"/>
+	            <div id = hamburguesa onmouseover="Resaltar('hamburguesa')" onmouseout="NoResaltar('hamburguesa')" onclick="goLink(2)">
+	              <blockquote class="ColorMenu" >
+	              <img src="./Imagenes/comida hamburguesa.png"/>
 	                Hamburguesas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
-	            <div onclick="goLink(3)">
+	            <div id = perro onmouseover="Resaltar('perro')" onmouseout="NoResaltar('perro')" onclick="goLink(3)">
 	              <blockquote class="ColorMenu">
 	              	<img src="./Imagenes/comida perro.png"/>
 	                Perros calientes<BR>
 	              </blockquote>
 	            </div><!--FIN PERRO CALIENTE-->
-	              <div onclick="goLink(4)">
+	              <div id = taco onmouseover="Resaltar('taco')" onmouseout="NoResaltar('taco')"onclick="goLink(4)">
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/taco.png"/>
 	                  Taco<BR>
 	                </blockquote>
 	              </div><!--FIN ITEM CACHAPAS-->
-	              <div onclick="goLink(5)">
+	              <div id = nachos onmouseover="Resaltar('nachos')" onmouseout="NoResaltar('nachos')" onclick="goLink(5)">
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/nachos.png"/>
 	                  Otros<BR>
