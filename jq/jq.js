@@ -40,7 +40,7 @@ $(function()
 		}
 	});
 
-	$('#maracaibo , #valencia , #caracas , #pizza, #hamburguesa , #perro , #taco , #nachos, #Contactos, #clasica, #whopperC, #whopperP, #whopperM, #sombrero ').click(function(){
+	$('#maracaibo , #valencia , #caracas , #pizza, #hamburguesa , #perro , #taco , #nachos, #Contactos').click(function(){
 			switch(this.id){
 				case 'pizza': window.location="./MenuPizza.html";
 				break;
@@ -86,9 +86,8 @@ $(function()
 				     break;
 					 case 'sombrero':
 					 	hamburguesa = new comida('Hamburguesa sombrero',2000,'Carne, Pollo, lomito, papas fritas, Queso');
-						alert(hamburguesa.nombre);
-						window.location="./Pago.html";
-						
+						alert("./Pago.html"+"?"+"hamburguesa.nombre"+"="+hamburguesa.nombre+"&"+"hamburguesa.precio"+"="+hamburguesa.precio+"&"+"hamburguesa.ingredientes"+"="+hamburguesa.ingredientes);
+						window.location="./Pago.html"+"?"+"hamburguesa.nombre"+"="+hamburguesa.nombre+"&"+"hamburguesa.precio"+"="+hamburguesa.precio+"&"+"hamburguesa.ingredientes"+"="+hamburguesa.ingredientes;
 					 break;
 			}
 	});
@@ -104,6 +103,8 @@ function cliente(nombre, apellido, dia, mes){
 		this.apellido = apellido;
 		this.dia = dia;
 		this.mes = mes;
+
+
 }
 
 function comida(nombre, precio, ingredientes){
@@ -113,7 +114,15 @@ function comida(nombre, precio, ingredientes){
 
 }
 
-
+function pasarVariables(pagina, nombres) {
+pagina +="?";
+nomVec = nombres.split(",");
+for (i=0; i<nomVec.length; i++)
+pagina += nomVec[i] + "=" + escape(eval(nomVec[i]))+"&";
+pagina = pagina.substring(0,pagina.length-1);
+location.href=pagina;
+//return pagina;
+}
 
 });
 		
