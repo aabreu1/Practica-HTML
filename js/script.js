@@ -111,26 +111,11 @@
 
 	
 
-		function getSugerencia(){
-			sugerencia  = getNum(1,5);
-			switch(sugerencia){
-				case 1: alert("Te sugerimos las Pizzas");
-				break;
-				case 2: alert("Te sugerimos los Perros");
-				break;
-				case 3: alert("Te sugerimos las Hamburguesas");
-				break;
-				case 4: alert("Te sugerimos los Tacos");
-				break;
-				case 5: alert("Te sugerimos Algun Contorno");
-				break;
-			}
-		} 
+		
 
 		function goLink(link){
 			switch(link){
-				case 1: 
-						window.location="./MenuPizza.html";
+				case 1: window.location="./MenuPizza.html";
 				break;
 				case 2:  window.location="./MenuHamburguesas.html";
 				break;
@@ -164,7 +149,22 @@
 				else alert("SELLO");
 				
 			}
-
+		
+		function getSugerencia(){
+			sugerencia  = getNum(1,5);
+			switch(sugerencia){
+				case 1: alert("Te sugerimos las Pizzas");
+				break;
+				case 2: alert("Te sugerimos los Perros");
+				break;
+				case 3: alert("Te sugerimos las Hamburguesas");
+				break;
+				case 4: alert("Te sugerimos los Tacos");
+				break;
+				case 5: alert("Te sugerimos Algun Contorno");
+				break;
+			}
+		} 
 		function getNum(min, max) {
 		  return Math.floor((Math.random() * max) + min);
 

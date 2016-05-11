@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
-<script src="./js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
+<script src="./jq/jq.js"></script>
 <link rel="stylesheet" href="css/estilos.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8,12 +9,12 @@
 
 
 </head>
-<body onload="load()"> 
+<body > 
 <div id=Cuerpo>
 	<div id=Top>
 	  <div id= Logo width=50%><img src="./Imagenes/logo%20hamburguesa.png" width="157" height=100%/></div><!--FIN LOGO DE LA PAGINA-->
-	  <div class="ColorEslogan" id=ESLOGAN style="margin-top: 3%">BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
-	    <div id=Contactos align="left" onclick="goLink(7)">
+	  <div class="ColorEslogan" id=ESLOGAN style=" margin-top: 3%">BARRIGA LLENA CORAZON CONTENTO</div> <!--ESLOGAN-->
+	    <div id=Contactos align="left" >
 	    	<img src="./Imagenes/twitter icon.png" width="32" height="32"/>
 	    	
 	        <img src="./Imagenes/facebook icon.png" width="32" height="32"/> 
@@ -26,20 +27,20 @@
 	</br>
 	<div id=Mid>
 			<div id=Izq>
-				<div id=Ubicacion onclick="goLink(6)">
+				<div id=Ubicacion>
 						<font  class="ColorTitulos2"> LOCALIZACION</font>
 				<BR>
-		          <div id = maracaibo onmouseover="Resaltar('maracaibo')" onmouseout="NoResaltar('maracaibo')">
+		          <div id = maracaibo >
 		            <blockquote>
 		              <span class="ColorLetra">Maracaibo<BR>
 		              </span></blockquote>
 		          </div><!--FIN ITEM MARACAIBO-->
-		          <div id = valencia onmouseover="Resaltar('valencia')" onmouseout="NoResaltar('valencia')">
+		          <div id = valencia>
 		            <blockquote><span class="ColorLetra">
 		              Valencia<BR>
 		            </span></blockquote>
 		          </div><!--FIN ITEM VALENCIA-->
-		          <div id = caracas onmouseover="Resaltar('caracas')" onmouseout="NoResaltar('caracas')"> 
+		          <div id = caracas> 
 		            <blockquote><span class="ColorLetra">
 		              Caracas</span><BR>
 		            </blockquote>
@@ -54,7 +55,7 @@
 				<div align=left class="ColorMenu" id=Menu>
 	            <font class="ColorTitulos">MENU</font>
 	            
-	            <div id = pizza onmouseover="Resaltar('pizza')" onmouseout="NoResaltar('pizza')" onclick="goLink(1)">
+	            <div id = pizza>
 	              <blockquote class="ColorMenu">
 	              <img src="./Imagenes/comida pizza.png" />
 	                Pizzas<BR>
@@ -62,25 +63,25 @@
 	              <div id=itempizza1></div>
 	              <div id=itempizza2></div>
 	            </div><!--FIN ITEM PIZZA-->
-	            <div id = hamburguesa onmouseover="Resaltar('hamburguesa')" onmouseout="NoResaltar('hamburguesa')" onclick="goLink(2)">
+	            <div id = hamburguesa >
 	              <blockquote class="ColorMenu" >
 	              <img src="./Imagenes/comida hamburguesa.png"/>
 	                Hamburguesas<BR>
 	              </blockquote>
 	            </div><!--FIN ITEM HAMBURGUESA-->
-	            <div id = perro onmouseover="Resaltar('perro')" onmouseout="NoResaltar('perro')" onclick="goLink(3)">
+	            <div id = perro>
 	              <blockquote class="ColorMenu">
 	              	<img src="./Imagenes/comida perro.png"/>
 	                Perros calientes<BR>
 	              </blockquote>
 	            </div><!--FIN PERRO CALIENTE-->
-	              <div id = taco onmouseover="Resaltar('taco')" onmouseout="NoResaltar('taco')"onclick="goLink(4)">
+	              <div id = taco>
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/taco.png"/>
 	                  Taco<BR>
 	                </blockquote>
 	              </div><!--FIN ITEM CACHAPAS-->
-	              <div id = nachos onmouseover="Resaltar('nachos')" onmouseout="NoResaltar('nachos')" onclick="goLink(5)">
+	              <div id = nachos>
 	                <blockquote class="ColorMenu">
 	                <img src="./Imagenes/nachos.png"/>
 	                  Otros<BR>
@@ -93,17 +94,18 @@
 				<img src="./Imagenes/pepsi vather.png" width=100% />
 			</div>
 	</div>
+	<BR>
 	<div id=Bot align="center">
 	<blockquote class="ColorMenu">
 	                  No puedes decidir?
 	                </blockquote>
 		<BR>
-	<img src="./imagenes/coins.png" onclick="flip()">
+	<img id=moneda src="./imagenes/coins.png">
 			<blockquote class="ColorMenu">
 	                  Lanza una moneda
 	                </blockquote>
 	<BR>
-	<img src="./imagenes/direction.png" onclick="getSugerencia()">
+	<img id=letrero src="./imagenes/direction.png">
 			<blockquote class="ColorMenu">
 	                  Arriesgate (Sugerencia Aleatoria)
 	                </blockquote>
