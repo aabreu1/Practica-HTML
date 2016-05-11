@@ -88,12 +88,12 @@ $(function()
 			switch(this.id){
 				case 'clasica':
 						var hamburguesa = new comida('Hamburguesa-clasica',800,'Carne');
-						window.location="./Pago.html";
+						window.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					
 				     break;
 				     case 'whopperC':
 				     	var hamburguesa = new comida('Hamburguesa-whopper-carne',1200,'Carne-Queso');
-						window.location="./Pago.html";
+						window.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					
 				     break;
 					 case 'whopperP':
@@ -103,7 +103,7 @@ $(function()
 					 break;
 				     case 'whopperM':
 				     	hamburguesa = new comida('Hamburguesa-whopper-mixta',1400,'Carne-Pollo-Queso');
-						window.location="./Pago.html";
+						window.locatiwindow.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					
 				     break;
 					 case 'sombrero':
