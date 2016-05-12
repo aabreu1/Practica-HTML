@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="./jq/jq.js"></script>
 <link rel="stylesheet" href="css/estilos.css">
 <head>
@@ -16,39 +17,50 @@
 	<div id=Mid>
 		<div id=Cent style="margin-left: 20%" style="margin-top: 10%">
 			<div align=left class="ColorMenu" id=Menu > 
-			<img src="./Imagenes/comida hamburguesa.png" style="margin-left: 5%"/>
-            <font class="ColorTitulos">Hamburguesas</font>
+			<img src="./Imagenes/receipt.png" style="margin-left: 15%"/>
+            <font class="ColorTitulos">Pago</font>
             <div>
               <blockquote class="ColorMenu">
-                <br>
+              
 							Nombre : <input type='text' name='txtnombre'> 
 							<span id='errorNom' class='error'>*</span>
-							<br>
+						
               </blockquote>
             
             </div><!--FIN ITEM PIZZA-->
             <div>
               <blockquote class="ColorMenu">
-               <br>
+                
+							Día : <input type="dia" name='txtdia'> 
+							<span id='errorNom' class='error'>*</span>
+							<br>
+							Mes : <input type='mes' name='txtmes'> 
+							<span id='errorNom' class='error'>*</span>
+              </blockquote>
+            
+            </div><!--FIN ITEM PIZZA-->
+            <div>
+              <blockquote class="ColorMenu">
+             
 							Producto : <input type='text' id=txtproducto readonly="true"> 
 							<span id='errorproducto' class='error'></span>
-							<br>
+							
               </blockquote>
             </div><!--FIN Carne-->
             <div>
               <blockquote class="ColorMenu">
-                <br>
+            
 							Precio : <input id=txtprecio readonly="true"> 
 							<span id='errorprecio' class='error'></span>
-							<br>
+							
               </blockquote>
             </div><!--FIN Pollo-->
               <div>
                 <blockquote class="ColorMenu">
-                  <br>
+                
 							Ingredientes : <input type='text' id=txtingredientes > 
 							<span id='erroringrediente' class='error'></span>
-							<br>
+							
               </div><!--FIN  Mixta-->
 
             </div><!--FIN MENU-->
