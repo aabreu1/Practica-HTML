@@ -4,7 +4,6 @@
 $(function()
 {	
 
-
 		url = window.location.search;
 		sinsigno= url.split("?");
 		if(sinsigno.length>1)
@@ -98,12 +97,12 @@ $(function()
 				     break;
 					 case 'whopperP':
 						hamburguesa = new comida('Hamburguesa-whopper-Pollo',1300,'Pollo-Queso');
-						window.location="./Pago.html";
+						window.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					
 					 break;
 				     case 'whopperM':
 				     	hamburguesa = new comida('Hamburguesa-whopper-mixta',1400,'Carne-Pollo-Queso');
-						window.locatiwindow.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
+						window.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					
 				     break;
 					 case 'sombrero':
@@ -111,6 +110,91 @@ $(function()
 						window.location="./Pago.html"+"?"+hamburguesa.nombre+"&"+hamburguesa.precio+"&"+hamburguesa.ingredientes;
 					 break;
 			}
+	});
+
+	$('#checkbebida').click(function(){
+	if( $('#checkbebida').prop('checked') ) {
+    	$valor = eval($('#txtprecio').value) + 300;
+    	$('#txtprecio').val($valor);
+	}
+	else {
+		$valor = eval($('#txtprecio').value) - 300;
+    	$('#txtprecio').val($valor);	
+	}
+	});
+
+	$('#pagar').click(function(){
+			var error = 0 ;
+		
+		// validar nombre
+		var errorNom = document.getElementById('errorNom');
+
+		var nombre = document.formjs.txtnombre;
+		if( nombre.value === '' )
+		{
+			errorNom.style.visibility = 'visible';
+			nombre.style.background = '#B7D0EB';
+			error = 1;
+		}
+		else
+		{
+			errorNom.style.visibility = 'hidden';
+				// validar nombre
+				var re = /^[a-z]*$/i;
+				if ( !re.test(formjs.txtnombre.value) )
+				{
+					alert ( 'Posee datos NO validos' );
+					nombre.style.background = '#B7D0EB';
+					formjs.txtnombre.focus();
+					error = 1;					
+				}
+
+		}
+		
+		
+		// validar apellido
+		var re = /^[1-9]*$/i;
+		if ( !re.test(formjs.txttarjeta.value)||formjs.txttarjeta.value=="" )
+		{
+			alert ( 'Posee datos NO validos' );
+			formjs.txttarjeta.focus();		
+			errortarjeta.style.visibility = 'visible';
+			error = 1;
+		}
+
+
+		if ( (!re.test(formjs.txtdia.value))||(eval(formjs.txtdia.value) <= 0 ||eval(formjs.txtdia.value) > 12)||formjs.txtdia.value=="")
+		{
+			alert ( 'Posee datos NO validos' );
+			formjs.txttarjeta.focus();
+			errordia.style.visibility = 'show';
+			error = 1;
+		}
+		else
+		{ 
+			//alert('Valores Correctos');
+		}
+
+		if ((!re.test(formjs.txtmes.value))||(eval(formjs.txtmes.value) <= 0 || eval(formjs.txtmes.value)>31)||formjs.txtdmes.value=="")
+		{
+			alert ( 'Posee datos NO validos' );
+			formjs.txttarjeta.focus();
+			errormes.style.visibility = 'show';
+			error = 1;
+		}
+		else
+		{ 
+			//alert('Valores Correctos');
+		}
+		
+		if ( error == 0 )
+		{
+			alert ( 'Gracias por su compra que tenga una FELIZ COMIDA' );
+			window.location="./MenuHamburguesas.html";
+						
+		}
+
+
 	});
 
 
@@ -135,16 +219,6 @@ $(function()
 
 	}
 
+
 });
 		
-
-/*
-function pasarVariables(pagina, nombres) {
-pagina +="?";
-nomVec = nombres.split(",");
-for (i=0; i<nomVec.length; i++)
-pagina += nomVec[i] + "=" + escape(eval(nomVec[i]))+"&";
-pagina = pagina.substring(0,pagina.length-1);
-location.href=pagina;
-//return pagina;
-}*/

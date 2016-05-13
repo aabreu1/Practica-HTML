@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="./jq/jq.js"></script>
+<script src="./jq/jq2.js"></script>
 <link rel="stylesheet" href="css/estilos.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,37 +20,48 @@
 			<div align=left class="ColorMenu" id=Menu > 
 				<img src="./Imagenes/receipt.png" style="margin-left: 15%"/>
 	            <font class="ColorTitulos">Pago</font>
-	            <div class="ColorMenu">
-	                            
-								Nombre : <input type='text' name='txtnombre'> 
-								<span id='errorNom' class='error'>*</span>
 	           
-	            </div><!--FIN ITEM PIZZA-->
-	            <div class="ColorMenu">
-								Día : <input type="dia" name='txtdia'> 
-								<span id='errorNom' class='error'>*</span>
-								<br>
-								Mes : <input type='mes' name='txtmes'> 
-								<span id='errorNom' class='error'>*</span>
-	         
-	            </div><!--FIN ITEM PIZZA-->
-	            <div class="ColorMenu">
-	               			# Tarjeta : <input id=txtprecio readonly="true"> 
-	            </div><!--FIN Carne-->
-	            <div class="ColorMenu">
-							Incluir bebida: <input type='checkbox' id=txtproducto>
-	            </div><!--FIN Carne-->
-	            <div class="ColorMenu">
-							Producto : <input type='text' id=txtproducto readonly="true">
-	            </div><!--FIN Pollo-->
-	            <div class="ColorMenu">
-	            			Ingredientes : <input type='text' id=txtingredientes > 
-	            </div><!--FIN  Mixta-->
-	            <div class="ColorMenu">
-	                       	Precio : <input id=txtprecio readonly="true"> 
-	            </div><!--FIN  Mixta-->
-            </div><!--FIN MENU-->
+				<form name='formjs' method='get' action=''>
+		            <div class="ColorMenu">
+		                            
+									Nombre : <input type='text' name='txtnombre'> 
+									<span id='errorNom' class='error'>*</span>
+		           
+		            </div><!--FIN ITEM PIZZA-->
+		            <div class="ColorMenu">
+									Día : <input type="dia" name='txtdia'> 
+									<span id='errordia' class='error'>*</span>
+									<br>
+									Mes : <input type='mes' name='txtmes'> 
+									<span id='errormes' class='error'>*</span>
+		         
+		            </div><!--FIN ITEM PIZZA-->
+		            <div class="ColorMenu">
+		               			# Tarjeta : <input id=txttarjeta>
+		               			<span id='errortarjeta' class='error'>*</span>
+		            </div><!--FIN Carne-->
+		            <div class="ColorMenu">
+								Incluir bebida: <input type='checkbox' id=checkbebida>
+		            </div><!--FIN Carne-->
+		            <div class="ColorMenu">
+								Producto : <input type='text' id=txtproducto readonly="true">
+		            </div><!--FIN Pollo-->
+		            <div class="ColorMenu">
+		            			Ingredientes : <input type='text' id=txtingredientes readonly="true"> 
+		            </div><!--FIN  Mixta-->
+		            <div class="ColorMenu">
+		                       	Precio : <input type='text' id=txtprecio readonly="true"> 
+		            </div><!--FIN  Mixta-->
+					<div class="ColorMenu">
+					<br>
+		           	 <input  type='submit' id=pagar value='Enviar' style="margin-left: 40%">     	
 
+		            </div><!--FIN  Mixta-->
+	           		
+					</form>
+					<br><br>
+					
+			</div><!--FIN MENU-->			
 		</div>
 	</div>
 	<div id="Bot" style="margin: 45%">
